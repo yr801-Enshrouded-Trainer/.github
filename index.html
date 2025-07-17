@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Download - Secure File Transfer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.css">
+</head>
+<body>
+    <div class="mesh-gradient"></div>
+    
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14,2 14,8 20,8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10,9 9,9 8,9"></polyline>
+                </svg>
+                <span>SecureTransfer</span>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="download-card">
+                <div class="card-header">
+                    <div class="file-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7,10 12,15 17,10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                    </div>
+                    <div class="header-content">
+                        <h1>Secure File Download</h1>
+                        <p class="file-description">Your file is being prepared with enterprise-grade security</p>
+                    </div>
+                    <div class="trust-badges">
+                        <div class="badge">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                <path d="M9 12l2 2 4-4"></path>
+                            </svg>
+                            <span>SSL Secured</span>
+                        </div>
+                        <div class="badge">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <circle cx="12" cy="16" r="1"></circle>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                            <span>Encrypted</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="download-info">
+                    <div class="info-row">
+                        <span class="label">File Hash:</span>
+                        <span class="value" id="fileHash">Generating...</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Status:</span>
+                        <span class="value status-text" id="status">Initializing...</span>
+                    </div>
+                </div>
+
+                <div class="progress-container">
+                    <div class="progress-wrapper">
+                        <div class="progress-track">
+                            <div class="progress-bar" id="progress-bar"></div>
+                        </div>
+                        <div class="progress-text">
+                            <span class="progress-label">Download Progress</span>
+                            <span class="progress-percentage">0%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="loader" id="loader">
+                    <div class="spinner"></div>
+                    <p>Processing your request...</p>
+                </div>
+
+                <div class="security-footer">
+                    <div class="security-notice">
+                        <div class="security-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 12l2 2 4-4"></path>
+                                <path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"></path>
+                                <path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"></path>
+                                <path d="M12 3c0 1-1 3-3 3s-3-2-3-3 1-3 3-3 3 2 3 3"></path>
+                                <path d="M12 21c0-1 1-3 3-3s3 2 3 3-1 3-3 3-3-2-3-3"></path>
+                            </svg>
+                        </div>
+                        <p>Secured with enterprise-grade encryption</p>
+                    </div>
+                    <div class="compliance-badges">
+                        <div class="compliance-badge">
+                            <span>SOC 2</span>
+                        </div>
+                        <div class="compliance-badge">
+                            <span>GDPR</span>
+                        </div>
+                        <div class="compliance-badge">
+                            <span>ISO 27001</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 SecureTransfer. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
